@@ -6,7 +6,7 @@
     "connection": {
       "database": "TestingDB",
       "user": "postgres",
-      "password": "",
+      "password": "oslash@Password",
       "host": "localhost",
       "port": "5432"
     },
