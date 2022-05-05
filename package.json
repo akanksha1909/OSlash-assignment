@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "oslash-assignment",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=development node index.js",
+    "migrate": "knex migrate:latest",
+    "test": "NODE_ENV=test jest --watchAll --coverage"
   },
   "repository": {
     "type": "git",
@@ -18,13 +19,17 @@
   },
   "homepage": "https://github.com/akanksha1909/OSlash-assignment#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.7",
     "cookie-parser": "^1.4.6",
     "express": "^4.18.1",
     "express-validator": "^6.14.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^2.0.0",
+    "moment": "^2.29.3",
     "objection": "^3.0.1",
     "pg": "^8.7.3",
+    "supertest": "^6.2.3",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
